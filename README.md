@@ -1,3 +1,25 @@
+# React List component
+
+## Tech stack
+- React
+- Typescript
+
+### Implement a `List` component with the following features:
+
+- Accepts an array of JSON data with any structure;
+- Accepts a required prop with renderer function which defines content of the `Info` column (see below);
+- Multiple items can be checked;
+
+## Sample datasets
+- There are two JSON sample datasets under src/data
+- example1.json
+- example2.json
+
+## - App Navigation
+- Navigation Menu had 2 menu with Example1 and Example2 sample 
+- Example1.tsx is default Navigation 
+- Example2 can be seen on Example2.tsx
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
