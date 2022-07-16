@@ -1,7 +1,7 @@
 import React from 'react'
 import ListDataProvider, { ChildProps } from './ListDataProvider'
 
-type ItemProps = {
+export type ItemProps = {
     items: Object[]
 }
 
@@ -11,7 +11,10 @@ class List extends React.Component<ItemProps> {
         return (
             <ListDataProvider
                 render={(props: ChildProps) => (
-                    <div className="flex flex-col justify-center h-full">
+                    <div
+                        className="flex flex-col justify-center h-full"
+                        data-testid="listDiv"
+                    >
                         <div className="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
                             <header className="px-5 py-4 border-b border-gray-100">
                                 <div className="font-semibold text-gray-800">
