@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-type ListState = {
+export type ListState = {
     checked: string[]
 }
 
@@ -8,7 +8,7 @@ export type ChildProps = ListState & {
     itemSelected(event: React.ChangeEvent<HTMLInputElement>): void
 }
 
-type ListProps = {
+export type ListProps = {
     render(state: ChildProps): React.ReactNode
 }
 
@@ -17,7 +17,7 @@ class ListDataProvider extends React.Component<ListProps, ListState> {
         checked: [],
     }
 
-    handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
+    handleCheck(event: React.ChangeEvent<HTMLInputElement>) {
         var updatedList: string[] = [...this.state.checked]
         if (event.target.checked) {
             updatedList = [...this.state.checked, event.target.value]
@@ -29,6 +29,7 @@ class ListDataProvider extends React.Component<ListProps, ListState> {
         }
         this.setState({ checked: updatedList })
     }
+
     render() {
         return this.props.render({
             ...this.state,
